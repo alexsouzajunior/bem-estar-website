@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Movimenta</title>
+    <link rel="stylesheet" href="/styles/login.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <section>
+        <div class="container__login">
+            <h2 class="title__login">Login - <a href="/index.html">Voltar</a></h2>
+            <div class="button__google">
+                <span>Entrar pelo Google</span>
+                <img src="/assets/images/icons/google-icone.png" alt="Google icone">
+            </div>
+            <form action="" class="wrapper">
+                <label for="">Email</label>
+                <div class="inner">
+                    <input type="email" required>
+                    <i class='bxr bx-user'></i>
+                </div>
+                <label for="">Senha</label>
+                <div class="inner">
+                    <input type="password" class="password" required>
+                    <i class='bxr bx-eye-slash hidePassword'></i>
+                    <i class="bxr bx-eye showPassword"></i>
+                </div>
+                <a href="#" class="text">
+                    <span>Esqueceu a senha?</span>
+                </a>
+            <button type="submit" class="button__login">Entrar</button>
+            </form>
+            <span class="text_register">Não tem cadastro <a href="/pages/cadastro.html">Cadastra-se</a></span>
+        </div>
+    </section>
+
+    <script src="/scripts/login.js"></script>
+</body>
+</html>

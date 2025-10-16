@@ -4,34 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem estar</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
-            <a href="#" class="navbar__logo">Logo</a>
+            <a href="/index.html" class="navbar__logo">
+                <img src="/assets/images/logo/logo_movimenta.png" alt="Logo Movimenta" class="logo__image">
+                <span>Movimenta</span>
+            </a>
             <ul class="navigation__menu">
                 <li>
-                    <a href="#">Início</a>
+                    <a href="/index.html" class="active">Início</a>
                 </li>
                 <li>
-                    <a href="#">Ranking</a>
+                    <a href="/pages/ranking.html">Ranking</a>
                 </li>
                 <li>
-                    <a href="#">Videos</a>
+                    <a href="/pages/videos.html">Videos</a>
                 </li>
                 <li>
-                    <a href="#">Blog</a>
+                    <a href="/pages/loja-movimenta.html">Loja Movimenta</a>
+                </li>
+                <li>
+                    <a href="#">Desafio Movimenta</a>
                 </li>
             </ul>
-            <a href="#">
-                <div class="navigation__right">
-                    <i class="bxr bx-user"></i>
-                    <span>Login</span>
-                </div>
-            </a>
         </nav>
     </header>
+
+    <header class="navbar__bottom">
+        <ul class="navbar__bottom__links">
+            <li>
+                <a href="#" class="active navbar__bottom__link">
+                    <div class="navbar__bottom__link--icon">
+                        <i class='bxr  bx-home-alt-2'></i>
+                    </div>
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="/pages/ranking.html" class="navbar__bottom__link">
+                    <i class='bxr  bx-trophy'></i> 
+                Ranking
+                </a>
+            </li>
+            <li>
+                <a href="/pages/videos.html" class="navbar__bottom__link">
+                    <i class='bxr  bx-video'></i> 
+                Videos
+                </a>
+            </li>
+            <li>
+                <a href="/pages/loja-movimenta.html" class="navbar__bottom__link">
+                    <i class='bxr bx-store'></i>
+                Loja
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main class="hero">
+        <div class="hero__content">
+            <h2 class="hero__title">Seja bem vindo</h2>
+            <p class="hero__paragraph">Nosso site tem como propósito contribuir para a qualidade de vida do trabalhador, oferecendo exercícios orientados e práticas essenciais para o dia a dia no ambiente de trabalho.</p>
+        </div>
+    </main>
+
+    <section class="hero__section">
+        <div class="content__section">
+            <h2 class="title__section">Bem estar e a saúde do colaborador</h2>
+            <p class="paragraph__section">Além de promover o bem-estar e a saúde do colaborador, também dedicamos atenção à ergonomia, trazendo dicas que ajudam a aumentar a produtividade e tornar o ambiente profissional mais confortável e eficiente.</p>
+        </div>
+        <img src="/assets/images/pessoas-fazendo-exercicio-no-trabalho.jpg" alt="Pessoas fazendo exercício no trabalho" class="image__section">
+    </section>
+
+    <section class="game__section">
+        <div class="game__section__content">
+            <h2>Desafio Movimenta</h2>
+            <p>O game movimenta é um jogo que você faz pontos fazendo exercícios, se diverte, ganha premiações e melhorando o seu bem-estar</p>
+            <a href="/pages/cadastro.html" class="game__section__button">Jogar</a>
+        </div>
+    </section>
+
+    <section class="section__dicas">
+        <h2 class="title">Dicas</h2>
+        <p class="paragraph">Lorem ipsum dolor sit amet. Id consequuntur omnis et voluptatem nisi sed blanditiis nesciunt aut nostrum sint hic pariatur natus.</p>
+        <div class="container">
+            <div class="card__item">
+                <img src="/assets/images/homem-esticando-os-bracos.jpg" alt="Homem esticando os braços" class="card__image">
+                <div class="card__content">
+                    <h2 class="title__card">Saúde física</h2>
+                    <p class="descrition__card">Manter uma dieta equilibrada, rica em nutrientes e com consumo adequado de água.</p>
+                    <a href="#" class="card__button">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card__item">
+                <img src="/assets/images/mulher-alongando-se.jpg" alt="Mulher alongando-se" class="card__image">
+                <div class="card__content">
+                    <h2 class="title__card">Exercícios físicos</h2>
+                    <p class="descrition__card">Praticar atividade física regularmente, como caminhada, corrida, natação ou musculação.</p>
+                    <a href="#" class="card__button">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card__item">
+                <img src="/assets/images/mulher-fazendo-exercicios-na-praia.jpg" alt="Mulher fazendo exercícios na praia" class="card__image">
+                <div class="card__content">
+                    <h2 class="title__card">Bem-estar</h2>
+                    <p class="descrition__card">Gerir o stress através de técnicas de relaxamento como meditação ou yoga.</p>
+                    <a href="#" class="card__button">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/scripts/script.js"></script>
 </body>
 </html>

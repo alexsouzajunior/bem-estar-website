@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/assets/images/backgrounds/background-cadastro.jpg) no-repeat center/cover;
+}
+
+section .container{
+    padding: 1rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    margin: 1rem;
+    max-width: 1000px;
+    border-radius: 10px;
+}
+
+.container .heading{
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.heading .logo{
+    color: #06D001;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.container .title__register{
+    margin: 20px 0 5px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.container .box__input{
+    display: flex;
+    flex-direction: column;
+}
+
+.col__one, .col__two{
+    columns: 2;
+}
+
+.box__input label{
+    font-size: .8rem;
+    font-weight: 400;
+    color: #000;
+}
+
+.box__input input, select{
+    margin: 0;
+    width: 100%;
+    padding: 3px 5px;
+    border: 1px solid #DDD5D7;
+    border-radius: 2px;
+}
+
+.box__input input:focus,
+.box__input select:focus{
+    outline: 2px solid #17C000;
+}
+
+.password__input{
+    position: relative;
+}
+
+.password__input i{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+}
+
+.showPassword{
+    visibility: hidden;
+}
+
+.showPassword.visible{
+    visibility: visible;
+}
+
+.hidePassword{
+    visibility: visible;
+}
+
+.hidePassword.active{
+    visibility: hidden;
+}
+
+.box__input .heading__input{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.box__radio{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.box__input .radio__input{
+    display: flex;
+    gap: .25rem;
+    width: max-content;
+    margin: 0 0 10px;
+}
+
+.box__input .input__hidden{
+    display: none;
+}
+
+.input__hidden.active{
+    display: block;
+    position: relative;
+    bottom: 5px;
+}
+
+.input__hidden span{
+    font-size: .9rem;
+    font-weight: 400;
+    color: #000;
+}
+
+.container .btn__submit{
+    background: #3aef25;
+    border: 1px solid #3aef25;
+    width: 50%;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #000;
+    margin: 20px auto 10px;
+    cursor: pointer;
+    transition: .25s ease-in-out;
+}
+
+.btn__submit:hover{
+    background: transparent;
+}
+
+.container .text{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    margin-top: 10px;
+}
+
+.text a{
+    color: #06D001;
+}
+
+@media screen and (max-width: 550px) {
+    .col__one, .col__two{
+        columns: 1;
+    }
+}

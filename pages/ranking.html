@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking - Movimenta</title>
+    <link rel="stylesheet" href="/styles/ranking.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+        <header class="header">
+        <nav class="navbar">
+            <a href="/index.html" class="navbar__logo">
+                <img src="/assets/images/logo/logo_movimenta.png" alt="Logo Movimenta" class="logo__image">
+                <span>Movimenta</span>
+            </a>
+            <ul class="navigation__menu">
+                <li>
+                    <a href="/index.html">Início</a>
+                </li>
+                <li>
+                    <a href="/pages/ranking.html" class="active">Ranking</a>
+                </li>
+                <li>
+                    <a href="/pages/videos.html">Videos</a>
+                </li>
+                <li>
+                    <a href="/pages/loja-movimenta.html">Loja Movimenta</a>
+                </li>
+                <li>
+                    <a href="/pages/desafio-movimenta.html">Desafio Movimenta</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+        <header class="navbar__bottom">
+        <ul class="navbar__bottom__links">
+            <li>
+                <a href="/index.html" class="navbar__bottom__link">
+                        <i class='bxr  bx-home-alt-2'></i>
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="/pages/ranking.html" class="active navbar__bottom__link">
+                    <div class="navbar__bottom__link--icon">
+                        <i class='bxr  bx-trophy'></i> 
+                    </div>
+                Ranking
+                </a>
+            </li>
+            <li>
+                <a href="/pages/videos.html" class="navbar__bottom__link">
+                    <i class='bxr  bx-video'></i> 
+                Videos
+                </a>
+            </li>
+            <li>
+                <a href="/pages/loja-movimenta.html" class="navbar__bottom__link">
+                    <i class='bxr bx-store'></i>
+                Loja
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="wrapper">
+        <div class="profile">
+            <div class="profile__img">
+                <img src="/assets/images/profiles/perfil_mulher.jpg" alt="Perfil de uma mulher">
+            </div>
+            <div class="info">
+                <h2 class="profile__name">Beatriz</h2>
+                <span class="profile__cargo">Analista de TI</span>
+            </div>
+        </div>
+        <div class="points">
+            <span>Seus Pontos</span>
+            <h1>1000 Pontos</h1>
+            <div class="icons">
+                <a href="/pages/loja-movimenta.html">
+                    <div class="store-icone">
+                        <i class='bxr bx-store'></i>
+                    </div>
+                    <span>Loja Movimenta</span>
+                </a>
+            </div>
+        </div>
+    </div>
+        <section>
+            <table class="ranking">
+                <tr class="category">
+                    <th>Posição</th>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Pontos</th>
+                </tr>
+                <tr>
+                    <td class="td_none"></td>
+                    <td data-title="Posição">1</td>
+                    <td data-title="Nome">Beatriz Silva</td>
+                    <td data-title="Cargo">Analista de TI</td>
+                    <td data-title="Pontos">1000</td>
+                </tr>
+                <tr>
+                    <td class="td_none"></td>
+                    <td data-title="Posição">2</td>
+                    <td data-title="Nome">Larrissa Campos</td>
+                    <td data-title="Cargo">Auxiliar administrativo</td>
+                    <td data-title="Pontos">750</td>
+                </tr>
+                <tr>
+                    <td class="td_none"></td>
+                    <td data-title="Posição">3</td>
+                    <td data-title="Nome">Fernanda Pereira</td>
+                    <td data-title="Cargo">Auxiliar de farmacia</td>
+                    <td data-title="Pontos">550</td>
+                </tr>
+                <tr>
+                    <td class="td_none"></td>
+                    <td data-title="Posição">4</td>
+                    <td data-title="Nome">Jose Souza</td>
+                    <td data-title="Cargo">Atendente</td>
+                    <td data-title="Pontos">250</td>
+                </tr>
+            </table>
+        </section>
+
+    <script src="/scripts/ranking.js"></script>
+</body>
+</html>

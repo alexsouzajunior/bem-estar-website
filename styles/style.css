@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    padding: 15px 30px;
+    transition: .5s;
+    z-index: 10;
+}
+
+.header.sticky{
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.header.sticky .navbar__logo span{
+    color: #2a8e09;
+}
+
+.header.sticky .navbar :is(ul li a){
+    color: #000;
+}
+
+.header .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .navbar .navbar__logo{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.navbar__logo .logo__image{
+    width: 50px;
+}
+
+.navbar__logo span{
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.header .navbar :is(.navbar__logo, ul li a){
+    color: #fff;
+}
+
+.header .navbar ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar li a{
+    position: relative;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.navbar li a::before{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #06D001;
+    transition: .5s ease;
+}
+
+.navbar li a:hover::before{
+    width: 100%;
+}
+
+.navbar li a.active{
+    position: relative;
+}
+
+.navbar li a.active::before{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #06D001;
+}
+
+.navbar .navigation__right{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    background: #6eee87;
+    border: 1px solid transparent;
+    width: 150px;
+    height: 38px;
+    border-radius: 50px;
+    color: #2b2b2b;
+    transition: .5s ease-in-out;
+}
+
+.navigation__right:hover{
+    background: transparent;
+    border: 1px solid #6eee87;
+}
+
+.navbar .navigation__right i{
+    font-size: 1.2rem;
+}
+
+.navbar__bottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    padding: 10px;
+    display: none;
+    z-index: 1;
+}
+
+.navbar__bottom__links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar__bottom__links li a{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .25rem;
+    color: #000;
+}
+
+.navbar__bottom__links .navbar__bottom__link i{
+    font-size: 1.5rem;
+}
+
+.navbar__bottom__link{
+    opacity: .5;
+}
+
+.navbar__bottom__link.active{
+    opacity: 1;
+}
+
+.navbar__bottom__link--icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6eee87;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+}
+
+.hero{
+    background: url(/assets/images/pessoas-se-alongando-no-trabalho.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(9, 151, 115, 0.402), rgba(67, 182, 146, 0.649));
+}
+
+.hero__content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 1rem;
+    max-width: 1000px;
+    color: #fff;
+    z-index: 1;
+}
+
+.hero__content .hero__title{
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero__content .hero__paragraph{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.hero__section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero__section .content__section{
+    max-width: 500px;
+}
+
+.content__section .title__section{
+    font-size: 2.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.25;
+    margin-bottom: 5px;
+}
+
+.content__section .paragraph__section{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.hero__section .image__section{
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.game__section{
+    background: linear-gradient(to right, #9BEC00, #F3FF90);
+    padding: 1rem;
+}
+
+.game__section__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    max-width: 700px;
+    margin: auto;
+}
+
+.game__section__content h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.game__section__content p{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.game__section__content .game__section__button{
+    background: #F3FF90;
+    color: #000;
+    padding: 13px 100px;
+    margin-top: 30px;
+    border-radius: 50px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.section__dicas{
+    padding: 50px 1rem 100px;
+}
+
+.section__dicas .title{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.section__dicas .paragraph{
+    font-size: 1rem;
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 50px;
+}
+
+.container .card__item{
+    position: relative;
+    background: #fff;
+    width: 300px;
+}
+
+.card__item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #06D001;
+    transform: translate(10px, 10px);
+    z-index: -1;
+}
+
+.card__item .card__image{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card__item .card__content{
+    padding: 1rem 1rem 1.5rem;
+}
+
+.card__content .title__card{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1b1b1b;
+    margin-bottom: 5px;
+}
+
+.card__content .descrition__card{
+    font-size: .9rem;
+    font-weight: 400;
+    color: #252525;
+    margin-bottom: 20px;
+}
+
+.card__content .card__button{
+    background: #9BEC00;
+    color: #000;
+    padding: 7px 30px;
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 1050px) {
+    .hero__section{
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .hero__section .content__section{
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .content__section .title__section{
+        margin-bottom: 10px;
+    }
+
+    .hero__section .image__section{
+        margin-top: 50px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hero__content{
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero__content .hero__title{
+        line-height: 1.25;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .header .navbar{
+        justify-content: center;
+    }
+
+    .navbar__bottom{
+        display: block;
+    }
+
+    .navbar li{
+        display: none;
+    }
+
+    .content__section .title__section{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .hero__content .hero__title{
+        font-size: 2.5rem;
+    }
+
+    .content__section .title__section{
+        font-size: 1.85rem;
+    }
+}
