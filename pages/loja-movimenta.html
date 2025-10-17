@@ -25,13 +25,29 @@
                 <li>
                     <a href="/pages/videos.html">Videos</a>
                 </li>
-                <li>
-                    <a href="/pages/loja-movimenta.html" class="active">Loja Movimenta</a>
-                </li>
-                <li>
-                    <a href="/pages/desafio-movimenta.html">Desafio Movimenta</a>
-                </li>
             </ul>
+            <div class="navbar__right">
+                <div class="navbar__right__links">
+                <a href="/pages/desafio-movimenta.html" class="button">Desafio movimenta</a>
+                <a href="/pages/loja-movimenta.html" class="button__shop">
+                    <i class='bxr  bx-store'  ></i>
+                    <span>Loja movimenta</span>
+                </a>
+                </div>
+                <div class="burger">
+                    <i class='bxr  bx-menu'  ></i>
+                </div>
+                <div class="menu">
+                    <i class='bxr  bx-x close-menu'  ></i>
+                    <div class="menu__links">
+                    <a href="/pages/desafio-movimenta.html" class="button">Desafio movimenta</a>
+                    <a href="/pages/loja-movimenta.html" class="button__shop">
+                        <i class='bxr  bx-store'  ></i>
+                        Loja movimenta
+                    </a>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -53,14 +69,6 @@
                 <a href="/pages/videos.html" class="navbar__bottom__link">
                     <i class='bxr  bx-video'></i> 
                 Videos
-                </a>
-            </li>
-            <li>
-                <a href="/pages/loja-movimenta.html" class="active navbar__bottom__link">
-                    <div class="navbar__bottom__link--icon">
-                        <i class='bxr bx-store'></i>
-                    </div>
-                    Loja
                 </a>
             </li>
         </ul>
@@ -85,7 +93,7 @@
             <div class="inner">
                 <h2>Pontos Obtidos</h2>
                 <span class="points">1000</span>
-                <div class="btn__more__points">
+                <div id="btn__more__points" class="btn__more__points">
                     <span>Consiga mais pontos</span>
                 </div>
             </div>
@@ -99,7 +107,7 @@
             <div class="content">
                 <h1 class="title__section">Tenha um dia de folga</h1>
                 <p class="paragraph">Mexa-se bastante para melhorar sua saúde e ainda ganhar um Day Off.</p>
-                <a href="" class="btn">
+                <a href="#politica-premiacao" class="btn">
                     <span>Saiba mais sobre as Políticas das Premiações</span>
                 </a>
             </div>
@@ -118,15 +126,6 @@
                     <span>50000 <img src="" alt="" class="plus"></span>
                 </div>
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="carousel__item">
-                <img src="/assets/images/icons/beneficios/work-from-home.png" alt="" class="icone">
-                <div class="carousel__content">
-                    <h3>Garantia home office</h3>
-                    <span>10000 <img src="" alt="" class="plus"></span>
-                </div>
-            </div>
             </div>
             <div class="swiper-slide">
                 <div class="carousel__item">
@@ -178,7 +177,7 @@
   </div>
   </div>
 
-  <div class="politica__premiacao">
+  <div id="politica-premiacao" class="politica__premiacao">
     <div class="column_one">
     <h2>Política de Recebimento de Prêmios</h2>
         <p>Os colaboradores que conquistarem recompensas através do programa de benefícios poderão escolher entre brindes físicos e benefícios corporativos.

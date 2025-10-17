@@ -1,8 +1,21 @@
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('.menu');
+const closeMenu = document.querySelector('.close-menu');
 const modalVideo = document.querySelectorAll('.modal__video');
 const modalClose = document.querySelectorAll('.modal__close');
 const overlayModal = document.querySelectorAll('.overlay__modal');
 const infoVideoCardIcone = document.querySelector('.info__video');
 const btnPlayVideoSection = document.querySelector('.btn__play__video');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    menu.classList.toggle('open-menu');
+});
+
+closeMenu.addEventListener('click', () => {
+    burger.classList.remove('active');
+    menu.classList.remove('open-menu');
+});
 
 
 infoVideoCardIcone.addEventListener('click', () => {
