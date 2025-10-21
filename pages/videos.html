@@ -6,6 +6,7 @@
     <title>Videos - Movimenta</title>
     <link rel="stylesheet" href="/styles/videos.css">
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 </head>
 <body>
     <header class="header">
@@ -72,19 +73,47 @@
                 Videos
                 </a>
             </li>
+            <li>
+                <a href="/pages/loja-movimenta.html" class="navbar__bottom__link">
+                        <i class='bxr  bx-store'  ></i>
+                Loja
+                </a>
+            </li>
         </ul>
     </header>
 
     <main>
-        <img src="/assets/images/mulher-se-alongando.jpg" alt="Mulher se alongando">
-        <div class="content">
-            <h2>Exercício de alongamento</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.</p>
-            <button class="btn__play__video">
-                <i class='bxr bx-play'></i>
-                <span>Play Video</span>
-            </button>
+        <div class="swiper slide-videos">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="image-slide">
+                        <img src="/assets/images/videos/mulher-se-alogando-no-parque.jpg" alt="">
+                    </div>
+                    <div class="content-slide">
+                        <h2 class="title-slide">Exercício de alongamento</h2>
+                        <p class="description-slide">Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.</p>
+                        <button class="btn__play__video">
+                            <i class="bxr bx-play"></i>
+                            <span>Play video</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="image-slide">
+                        <img src="/assets/images/videos/alongamento-no-pescoco.jpg" alt="">
+                    </div>
+                    <div class="content-slide">
+                        <h2 class="title-slide">Exercício no pescoço</h2>
+                        <p class="description-slide">Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.</p>
+                        <button class="btn__play__video">
+                            <i class="bxr bx-play"></i>
+                            <span>Play video</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="swiper-pagination"></div>
     </main>
 
     <h2 class="title__videos">Videos de exercícios</h2>
@@ -93,7 +122,7 @@
             <div class="card-item">
                 <div class="card-inner">
                     <div class="card-image">
-                        <img src="/assets/images/mulher-se-alongando.jpg" alt="Mulher se alongando">
+                        <img src="/assets/images/videos/mulher-se-alongando.jpg" alt="Mulher se alongando">
                         <div class="play__button">
                             <i class='bxr bx-play-circle'></i>
                         </div>
@@ -118,7 +147,7 @@
                 <i class='bxr bx-x'></i>
             </div>
             <div class="modal__image">
-                <img src="/assets/images/mulher-se-alongando.jpg" alt="Mulher se alongando">
+                <img src="/assets/images/videos/mulher-se-alongando.jpg" alt="Mulher se alongando">
                 <div class="play__button__modal">
                     <i class='bxr bx-play'></i>
                 </div>
@@ -132,7 +161,7 @@
                 <p class="description__video">Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
             </div>
         </div>
-
-    <script src="/scripts/videos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script src="/scripts/videos.js"></script>
 </body>
 </html>

@@ -51,3 +51,15 @@ window.addEventListener('scroll', () => {
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 0);
 });
+
+var swiper = new Swiper('.slide-videos', {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+        delay: 10000,
+        disableOnInteration: true
+    },
+    pagination: {
+        el: ".swiper-pagination"
+    }
+})

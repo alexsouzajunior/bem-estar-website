@@ -38,6 +38,12 @@
 .header.sticky .navbar__right .burger i{
     color: #000;
 }
+.header.sticky .navbar__right .button:hover{
+    color: #000;
+}
+.header.sticky .navbar li a::before{
+    background: #1ACE00;
+}
 
 .header .navbar{
     display: flex;
@@ -84,7 +90,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: #06D001;
+    background: #D7F2D3;
     transition: .5s ease;
 }
 
@@ -103,7 +109,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: #06D001;
+    background: #D7F2D3;
 }
 
 .navbar__right{
@@ -184,7 +190,7 @@
 }
 
 .burger i{
-    font-size: 1.85rem;
+    font-size: 2.5rem;
     color: #fff;
     margin-right: 25px;
     cursor: pointer;
@@ -193,12 +199,13 @@
 .menu{
     position: fixed;
     top: 0;
-    right: -250px;
-    width: 250px;
+    right: -350px;
+    width: 300px;
     height: 100vh;
     background: #fff;
     display: none;
     transition: 300ms ease-in-out;
+    z-index: 100;
 }
 
 .menu.open-menu{
@@ -208,7 +215,7 @@
 .menu .close-menu{
     display: flex;
     justify-content: flex-end;
-    margin: 20px 10px;
+    margin: 20px 30px;
     font-size: 1.85rem;
     cursor: pointer;
 }
@@ -266,7 +273,7 @@
 
 .navbar__bottom__links{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 2rem;
 }
@@ -284,6 +291,7 @@
 }
 
 .navbar__bottom__link{
+    position: relative;
     opacity: .5;
 }
 
@@ -291,58 +299,76 @@
     opacity: 1;
 }
 
+.navbar__bottom__link.active i,
+.navbar__bottom__link.active{
+    color: #10b030;
+}
+
 .navbar__bottom__link--icon{
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .25rem;
+    padding: .25rem 0 0;
 }
 
 .navbar__bottom__link--icon::before{
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #6eee87;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 10px;
+    height: 10px;
+    background: #10b030;
     border-radius: 10px;
     z-index: -1;
 }
 
 .hero{
-    background: url(/assets/images/pessoas-se-alongando-no-trabalho.jpg) no-repeat center/cover;
     width: 100%;
     height: 100vh;
+    background: linear-gradient(to right, #34A01C, #1FF835);
+}
+
+.hero .image__hero{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 1000px;
+    height: 100%;
+    object-fit: cover;
+    clip-path: circle(57% at 89% 50%);
 }
 
 .hero::after{
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 1000px;
     height: 100%;
-    background: linear-gradient(to left, rgba(9, 151, 115, 0.402), rgba(67, 182, 146, 0.649));
+    background: linear-gradient(to left, rgba(13, 70, 55, 0.402), rgba(43, 131, 103, 0.649));
+    clip-path: circle(57% at 89% 50%);
 }
 
 .hero__content{
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 1rem;
-    max-width: 1000px;
+    left: 0;
+    transform: translate(0, -50%);
+    padding: 1rem 4rem;
+    max-width: 775px;
     color: #fff;
     z-index: 1;
 }
 
 .hero__content .hero__title{
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .hero__content .hero__paragraph{
@@ -355,7 +381,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding: 1rem;
+    padding: 3.25rem 1rem;
     max-width: 1200px;
     margin: auto;
 }
@@ -370,11 +396,13 @@
     text-transform: uppercase;
     line-height: 1.25;
     margin-bottom: 5px;
+    color: #2ead15;
 }
 
 .content__section .paragraph__section{
     font-size: 1rem;
     font-weight: 400;
+    color: #323232;
 }
 
 .hero__section .image__section{
@@ -385,7 +413,7 @@
 }
 
 .game__section{
-    background: linear-gradient(to right, #9BEC00, #F3FF90);
+    background: linear-gradient(to left, #32b813, #14c225);
     padding: 1rem;
 }
 
@@ -394,7 +422,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
+    height: 430px;
     max-width: 700px;
     margin: auto;
 }
@@ -405,22 +433,31 @@
     text-transform: uppercase;
     margin-bottom: 10px;
     text-align: center;
+    color: #fff;
 }
 
 .game__section__content p{
     font-size: 1rem;
     font-weight: 400;
     text-align: center;
+    color: #ffffff;
 }
 
 .game__section__content .game__section__button{
-    background: #F3FF90;
-    color: #000;
+    background: transparent;
+    border: 2px solid #7bff7b;
+    color: #fff;
     padding: 13px 100px;
     margin-top: 30px;
     border-radius: 50px;
     font-size: 1.25rem;
     font-weight: 700;
+    transition: 300ms ease-in-out;
+}
+
+.game__section__button:hover{
+    background: #7bff7b;
+    color: #000;
 }
 
 .section__dicas{
@@ -429,9 +466,10 @@
 
 .section__dicas .title{
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.32rem;
     font-weight: 700;
-    color: #000;
+    color: #5ace17;
+    margin-bottom: 10px;
 }
 
 .section__dicas .paragraph{
@@ -439,6 +477,7 @@
     text-align: center;
     max-width: 700px;
     margin: auto;
+    color: #3a3838;
 }
 
 .container{
@@ -457,28 +496,19 @@
     position: relative;
     background: #fff;
     width: 300px;
-}
-
-.card__item::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #06D001;
-    transform: translate(10px, 10px);
-    z-index: -1;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 .card__item .card__image{
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .card__item .card__content{
-    padding: 1rem 1rem 1.5rem;
+    padding: .5rem 1rem 1.5rem;
 }
 
 .card__content .title__card{
@@ -491,15 +521,21 @@
 .card__content .descrition__card{
     font-size: .9rem;
     font-weight: 400;
-    color: #252525;
+    color: #4b4b4b;
     margin-bottom: 20px;
 }
 
 .card__content .card__button{
-    background: #9BEC00;
+    background: transparent;
+    border: 1px solid #9BEC00;
     color: #000;
     padding: 7px 30px;
     border-radius: 50px;
+    transition: 300ms ease-in-out;
+}
+
+.card__button:hover{
+    background: #9BEC00;
 }
 
 @media screen and (max-width: 1050px) {
@@ -523,8 +559,45 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1580px) {
+    .hero .image__hero{
+        width: 850px;
+        height: 100%;
+    }
+    .hero::after{
+        width: 850px;
+        height: 100%;
+    }
     .hero__content{
+        padding: 1rem 2.5rem;
+        max-width: 700px;
+    }
+    .hero__content .hero__title{
+        font-size: 3.1rem;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .hero__content{
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hero .image__hero{
+        width: 100%;
+        height: 100%;
+        clip-path: none;
+    }
+    .hero::after{
+        width: 100%;
+        height: 100%;
+        clip-path: none;
+    }
+    .hero__content{
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
         max-width: 100%;
         width: 100%;
     }
@@ -564,6 +637,10 @@
 
     .navbar li{
         display: none;
+    }
+    
+    .hero__content .hero__title{
+        font-size: 3rem;
     }
 
     .content__section .title__section{

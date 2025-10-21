@@ -67,7 +67,7 @@
 
     <main>
         <div class="image">
-            <img src="/assets/images/mulher-esticando-os-bracos.png" alt="Mulher esticando os braços no trabalho">
+            <img src="/assets/images/desafio-movimenta/mulher-esticando-os-bracos.png" alt="Mulher esticando os braços no trabalho">
         </div>
 
         <div class="container">
@@ -129,11 +129,15 @@
         <div class="container__videos">
             <div class="wrapper">
                 <div class="video__exercicio">
-                    <video src="/assets/images/videos/video_exercicio.mp4" controls class="video__player video__main"></video>
-                    <video src="/assets/images/videos/exercicio1.mp4" controls class="video__player exercicio_one"></video>
-                    <video src="/assets/images/videos/exercicio2.mp4" controls class="video__player exercicio_two"></video>
-                    <video src="/assets/images/videos/exercicio3.mp4" controls class="video__player exercicio_tree"></video>
-                    <video src="/assets/images/videos/exercicio4.mp4" controls class="video__player exercicio_four"></video>
+                    <video src="/assets/images/videos/video_exercicio.mp4" controls class="video__main"></video>
+                    <video src="/assets/images/videos/exercicios/exercicio1.mp4" controls class="video__player exercicio_one"></video>
+                    <video src="/assets/images/videos/exercicios/exercicio2.mp4" controls class="video__player exercicio_two"></video>
+                    <video src="/assets/images/videos/exercicios/exercicio3.mp4" controls class="video__player exercicio_tree"></video>
+                    <video src="/assets/images/videos/exercicios/exercicio4.mp4" controls class="video__player exercicio_four"></video>
+                    <div class="check_exercicio">
+                        <i class='bxr  bx-check'></i>
+                        <span>Concluir o exercicio</span>
+                    </div>
                 </div>
                 <div class="container__card">
                     <div class="inner__videos">
@@ -143,30 +147,16 @@
                             </div>
                             <div class="card__content">
                                 <h2 class="card__title">Alongamento de pescoço</h2>
-                                <div class="check_exercicio">
-                                <span>Concluir o exercicio</span>
-                                <input type="checkbox" name="" id="">
-                                </div>
-                                <div class="progress">
-                                    <progress value="100" max="100"></progress>
-                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="inner__videos">
                         <div class="card__exercicio card_two">
                             <div class="image__card">
-                                <img src="/assets/images/ilustracoes/ilustracao-exercicio2.jpg" alt="">
+                                <img src="/assets/images/ilustracoes/ilustracao-exercicio2.png" alt="">
                             </div>
                             <div class="card__content">
                                 <h2 class="card__title">Alongamento de Ombros e Braços</h2>
-                                <div class="check_exercicio">
-                                <span>Concluir o exercicio</span>
-                                <input type="checkbox" name="" id="">
-                                </div>
-                                <div class="progress">
-                                    <progress value="100" max="100"></progress>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -177,13 +167,6 @@
                             </div>
                             <div class="card__content">
                                 <h2 class="card__title">Alongamento de Dedos e Punhos</h2>
-                                <div class="check_exercicio">
-                                <span>Concluir o exercicio</span>
-                                <input type="checkbox" name="" id="">
-                                </div>
-                                <div class="progress">
-                                    <progress value="100" max="100"></progress>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -194,13 +177,6 @@
                             </div>
                             <div class="card__content">
                                 <h2 class="card__title">Alongamento de Costas</h2>
-                                <div class="check_exercicio" id="card_four">
-                                <span>Concluir o exercicio</span>
-                                <input type="checkbox" name="" id="">
-                                </div>
-                                <div class="progress">
-                                    <progress value="100" max="100"></progress>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -208,7 +184,19 @@
             </div>
         </div>
     </section>
-
+    <div class="overlay__modal"></div>
+    <div class="modal" id="hs-run-on-click-run-confetti">
+        <div class="modal__close">
+            <i class='bxr  bx-x'  ></i>
+        </div>
+        <div class="modal__content">
+            <i class='bxr  bx-check-circle'  ></i>
+            <h1 class="modal__title">Parabéns</h1>
+            <h2 class="modal__subtitle">Você concluiu o exercício</h2>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script src="/scripts/desafio-movimenta.js"></script>
 </body>
 </html>

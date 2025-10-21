@@ -183,6 +183,7 @@
     background: #fff;
     display: none;
     transition: 300ms ease-in-out;
+    z-index: 100;
 }
 
 .menu.open-menu{
@@ -250,7 +251,7 @@
 
 .navbar__bottom__links{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 2rem;
 }
@@ -275,22 +276,28 @@
     opacity: 1;
 }
 
+.navbar__bottom__link.active i,
+.navbar__bottom__link.active{
+    color: #10b030;
+}
+
 .navbar__bottom__link--icon{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .25rem;
+    padding: .25rem 0 0;
 }
 
 .navbar__bottom__link--icon::before{
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #6eee87;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 10px;
+    height: 10px;
+    background: #10b030;
     border-radius: 10px;
     z-index: -1;
 }
@@ -306,6 +313,14 @@ main{
 main .image{
     position: relative;
     overflow: hidden;
+    width: 100%;
+    height: 350px;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .image::before{
@@ -314,18 +329,20 @@ main .image{
     top: 0;
     left: 0;
     width: 100%;
-    height: 98.7%;
+    height: 100%;
     background: linear-gradient(to right, rgb(9, 151, 11, .5), rgb(67, 182, 144, .5));
 }
 
 main .profile{
     position: relative;
+    top: 0;
+    transform: translate(0, -20%);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    margin: 50px auto;
+    margin: auto;
 }
 
 .profile .profile__image{
@@ -494,6 +511,7 @@ main .profile{
 .inner h3{
     font-size: 1rem;
     font-weight: 400;
+    color: #000000;
 }
 
 .inner h3 .time{
@@ -521,11 +539,14 @@ main .profile{
     padding: 1rem;
     background: #1C1A23;
     border-radius: 10px;
+    width: min(100%, 800px);
+    height: 550px;
 }
 
 .video__exercicio video{
-    width: 800px;
-    height: 500px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
 }
 
  .exercicio_one,
@@ -550,14 +571,51 @@ main .profile{
     display: none;
 }
 
+.check_exercicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    background: #7cf017;
+    width: 225px;
+    height: 35px;
+    border-radius: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms ease-in-out;
+}
+
+.check_exercicio:hover{
+    background: #7cf017a0;
+}
+
+.check_exercicio span{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.check_exercicio i{
+    font-size: 1.25rem;
+}
+
+.check_exercicio.hide__button{
+    opacity: 1;
+    visibility: visible;
+}
+
+.check_exercicio.disable__button{
+    display: none;
+}
+
 .container__card{
     display: flex;
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 10px;
-    max-height: 430px;
+    max-height: 530px;
     padding: 10px;
-    margin-top: 17px;
     overflow: hidden;
     overflow-y: auto;
 }
@@ -570,10 +628,10 @@ main .profile{
 .inner__videos .card__exercicio{
     display: flex;
     background: #fff;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 10px;
     padding: 1rem;
     width: 400px;
+    cursor: pointer;
 }
 
 .card_one.active,
@@ -585,44 +643,108 @@ main .profile{
 
 .card__exercicio .image__card{
     overflow: hidden;
+    width: 50%;
+    height: 100%;
 }
 
 .image__card img{
     width: 120px;
     height: 120px;
     object-fit: cover;
-    margin-right: 30px;
 }
 
 .card__exercicio .card__content{
     position: relative;
-    line-height: 1.5;
+    line-height: 1.25;
+    width: 100%;
+    margin-left: 25px;
 }
 
 .card__content .card__title{
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #252525;
+    margin-bottom: 10px;
 }
 
-.card__content .check_exercicio{
-    display: flex;
-    align-items: center;
-    gap: .5rem;
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 500px;
+    height: 280px;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms ease-in-out;
+    z-index: 100;
 }
 
-.check_exercicio span{
-    font-size: 1rem;
-    font-weight: 400;
+.modal.show__modal{
+    opacity: 1;
+    visibility: visible;
 }
 
-.check_exercicio input{
-    width: 17px;
-    height: 17px;
+.overlay__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms ease-in-out;
+    z-index: 100;
 }
 
-.card__content .progress{
+.overlay__modal.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal .modal__close{
     position: absolute;
-    bottom: 0;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: max-content;
+}
+
+.modal__close i{
+    font-size: 1.75rem;
+}
+
+.modal__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+    padding: 1rem;
+}
+
+.modal__content i{
+    font-size: 4rem;
+    color: #37d008;
+    margin-bottom: 10px;
+}
+
+.modal__content .modal__title{
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.modal__content .modal__subtitle{
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 @media screen and (max-width: 1200px) {
@@ -697,6 +819,9 @@ main .profile{
 }
 
 @media screen and (max-width: 550px) {
+    main .profile{
+        transform: translate(0, -10%);
+    }
     .profile__dados{
         flex-direction: column;
     }
