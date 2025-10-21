@@ -248,6 +248,7 @@
 
 .menu__links .button__shop i{
     margin-left: 0;
+    color: #000;
 }
 
 .menu__links .button:hover{
@@ -266,7 +267,7 @@
     width: 100%;
     padding: 10px;
     display: none;
-    z-index: 1;
+    z-index: 100;
 }
 
 .navbar__bottom__links{
@@ -570,6 +571,7 @@
     opacity: 0;
     visibility: hidden;
     transition: .25s ease-in-out;
+    z-index: 100;
 }
 
 .modal__video{
@@ -584,6 +586,7 @@
     opacity: 0;
     visibility: hidden;
     transition: .25s ease-in-out;
+    z-index: 100;
 }
 
 .modal__video.open,

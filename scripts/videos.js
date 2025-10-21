@@ -29,10 +29,10 @@ infoVideoCardIcone.addEventListener('click', () => {
 
 btnPlayVideoSection.addEventListener('click', () => {
     modalVideo.forEach((item) => {
-        item.classList.toggle('open');
+        item.classList.remove('open');
     });
     overlayModal.forEach((item) => {
-        item.classList.toggle('show');
+        item.classList.remove('show');
     });
 });
 
