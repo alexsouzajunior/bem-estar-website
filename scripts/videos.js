@@ -23,14 +23,14 @@ closeMenu.addEventListener('click', () => {
 });
 
 
-infoVideoCardIcone.addEventListener('click', () => {
-    modalVideo.forEach((item) => {
-        item.classList.toggle('open');
-    });
-    overlayModal.forEach((item) => {
-        item.classList.toggle('show');
-    });
-});
+// infoVideoCardIcone.addEventListener('click', () => {
+//     modalVideo.forEach((item) => {
+//         item.classList.toggle('open');
+//     });
+//     overlayModal.forEach((item) => {
+//         item.classList.toggle('show');
+//     });
+// });
 
 btnPlayVideoSection.addEventListener('click', () => {
     modalVideo.forEach((item) => {

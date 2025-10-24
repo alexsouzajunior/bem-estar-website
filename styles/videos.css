@@ -609,10 +609,17 @@
     font-size: 1.2rem;
 }
 
+#videoAlongamento,
+#videoAlongamentoPescoco{
+    max-width: 800px;
+    padding: 10px;
+}
+
 .modal video{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 970px) {
@@ -642,6 +649,14 @@
         transform: translate(-50%, -50%);
         max-width: 100%;
         width: 90%;
+    }
+
+    .title__videos{
+        text-align: center;
+    }
+
+    .container{
+        justify-content: center;
     }
 }
 
@@ -679,7 +694,15 @@
         text-align: center;
     }
 
+    .content-slide .title-slide{
+        max-width: 100%;
+    }
+
     .content-slide .btn__play__video{
         margin: 25px auto;
+    }
+
+    #videoAlongamento{
+        max-width: 100%;
     }
 }

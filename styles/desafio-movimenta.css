@@ -704,14 +704,17 @@ main .profile{
     font-weight: 400;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1270px) {
     .wrapper__exercicio{
         align-items: center;
     }
 
     .video__exercicio video{
         width: 100%;
-        height: 100%;
+    }
+
+    .inner__videos .card__exercicio{
+        width: 90%;
     }
 }
 
@@ -737,6 +740,14 @@ main .profile{
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
+    }
+
+    .wrapper__exercicio .video__exercicio{
+        height: 100%;
+    }
+
+    .inner__videos .card__exercicio{
+        width: 400px;
     }
 }
 
@@ -799,14 +810,12 @@ main .profile{
         align-items: center;
         flex-direction: column;
         margin-top: 10px;
+        margin-left: 0;
     }
 
     .card__content .card__title{
         margin-bottom: 10px;
-    }
-
-    .card__content .progress{
-        position: relative;
+        text-align: center;
     }
 }
 

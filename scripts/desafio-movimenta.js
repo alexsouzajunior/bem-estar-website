@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
   }
 
   let = mensageSuccess.style.opacity = 0;
-  let = mensageSuccess.style.visibility = 'hidden';
+  let = mensageSuccess.style.display = 'none'
 
 cardOne.forEach((cardVideo => {
     cardVideo.addEventListener('click', () => {
@@ -40,7 +40,7 @@ cardOne.forEach((cardVideo => {
             videoPlayerOne.addEventListener('ended', () => {
                 videoPlayerOne.classList.remove('show__video');
                 mensageSuccess.style.opacity = 1;
-                mensageSuccess.style.visibility = 'visible';
+                mensageSuccess.style.display = 'flex';
                 runConfettiAnimation();
                 cardVideo.style.opacity = 0;
                 cardVideo.style.display = 'none';
@@ -66,7 +66,7 @@ cardTwo.forEach((cardVideo => {
         videoPlayerTwo.addEventListener('ended', () => {
             videoPlayerTwo.classList.remove('show__video');
             mensageSuccess.style.opacity = 1;
-            mensageSuccess.style.visibility = 'visible';
+            mensageSuccess.style.display = 'flex';
             runConfettiAnimation();
             cardVideo.style.opacity = 0;
             cardVideo.style.display = 'none';
@@ -116,7 +116,7 @@ cardFour.forEach((cardVideo => {
             videoPlayerFour.addEventListener('ended', () => {
                 videoPlayerFour.classList.remove('show__video');
                 mensageSuccess.style.opacity = 1;
-                mensageSuccess.style.visibility = 'visible';
+                mensageSuccess.style.display = 'flex';
                 runConfettiAnimation();
                 cardVideo.style.opacity = 0;
                 cardVideo.style.display = 'none';
