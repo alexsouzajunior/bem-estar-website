@@ -8,6 +8,10 @@
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <div class="loading">
+        <img src="/assets/images/logo/logo_movimenta.png" alt="Logo movimenta" class="logo">
+        <h3>Carregando</h3>
+    </div>
         <header class="header">
         <nav class="navbar">
             <a href="/index.html" class="navbar__logo">
@@ -80,7 +84,7 @@
 
             <div class="wrapper">
                 <div class="profile__dados">
-                    <div class="points">
+                    <div class="points__inner">
                         <div class="point">
                             <img src="/assets/images/icons/icone-pontos.png" alt="" class="plus">
                             <span>1000</span>
@@ -125,23 +129,28 @@
                 <h3>Novo desafio em: <h2 class="time"><span class="hour">00</span>:<span class="segunds">00</span></h2></h3>
             </div>
         </div>
-
-        <div class="container__videos">
-            <div class="wrapper">
+            <div class="wrapper__exercicio">
                 <div class="video__exercicio">
                     <video src="/assets/images/videos/video_exercicio.mp4" controls class="video__main"></video>
                     <video src="/assets/images/videos/exercicios/exercicio1.mp4" controls class="video__player exercicio_one"></video>
                     <video src="/assets/images/videos/exercicios/exercicio2.mp4" controls class="video__player exercicio_two"></video>
                     <video src="/assets/images/videos/exercicios/exercicio3.mp4" controls class="video__player exercicio_tree"></video>
                     <video src="/assets/images/videos/exercicios/exercicio4.mp4" controls class="video__player exercicio_four"></video>
-                    <div class="check_exercicio">
+                    <!-- <div class="check_exercicio">
                         <i class='bxr  bx-check'></i>
                         <span>Concluir o exercicio</span>
+                    </div> -->
+                    <div class="mensage__success__container" id="hs-run-on-click-run-confetti">
+                        <div class="mensage__success">
+                            <i class='bxr  bx-check-circle'  ></i>
+                            <h2>Parabéns</h2>
+                            <span>Você concluiu o exercício</span>
+                        </div>
                     </div>
                 </div>
                 <div class="container__card">
                     <div class="inner__videos">
-                        <div class="card__exercicio card_one">
+                        <div class="card__exercicio card_one card_video_one">
                             <div class="image__card">
                                 <img src="/assets/images/ilustracoes/ilustracao-exercicio1.png" alt="">
                             </div>
@@ -151,7 +160,7 @@
                         </div>
                     </div>
                     <div class="inner__videos">
-                        <div class="card__exercicio card_two">
+                        <div class="card__exercicio card_two card_video_two">
                             <div class="image__card">
                                 <img src="/assets/images/ilustracoes/ilustracao-exercicio2.png" alt="">
                             </div>
@@ -182,19 +191,7 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
-    <div class="overlay__modal"></div>
-    <div class="modal" id="hs-run-on-click-run-confetti">
-        <div class="modal__close">
-            <i class='bxr  bx-x'  ></i>
-        </div>
-        <div class="modal__content">
-            <i class='bxr  bx-check-circle'  ></i>
-            <h1 class="modal__title">Parabéns</h1>
-            <h2 class="modal__subtitle">Você concluiu o exercício</h2>
-        </div>
-    </div>
     
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script src="/scripts/desafio-movimenta.js"></script>

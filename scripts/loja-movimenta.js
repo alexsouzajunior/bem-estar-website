@@ -1,3 +1,4 @@
+const loading = document.querySelector('.loading');
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 const closeMenu = document.querySelector('.close-menu');
@@ -5,6 +6,10 @@ const card = document.querySelector('.profile__points');
 const arrowProfile = document.querySelector('.arrow__profile');
 const arrowNavbarBottom = document.querySelector('.arrow__navbar__bottom');
 const btnMorePoints = document.getElementById('btn__more__points');
+
+window.addEventListener('load', () => {
+    loading.classList.add('show');
+})
 
 let urlBtnMorePoints = location.href;
 btnMorePoints.addEventListener('click', () => {
@@ -54,6 +59,7 @@ var swiper = new Swiper(".mySwiper2", {
       pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
+        clickable: true
       },
 
       breakpoints: {

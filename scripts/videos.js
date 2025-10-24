@@ -1,3 +1,4 @@
+const loading = document.querySelector('.loading');
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 const closeMenu = document.querySelector('.close-menu');
@@ -6,6 +7,10 @@ const modalClose = document.querySelectorAll('.modal__close');
 const overlayModal = document.querySelectorAll('.overlay__modal');
 const infoVideoCardIcone = document.querySelector('.info__video');
 const btnPlayVideoSection = document.querySelector('.btn__play__video');
+
+window.addEventListener('load', () => {
+    loading.classList.add('show');
+})
 
 burger.addEventListener('click', () => {
     burger.classList.toggle('active');

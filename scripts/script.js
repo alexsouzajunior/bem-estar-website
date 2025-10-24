@@ -1,3 +1,4 @@
+const loading = document.querySelector('.loading');
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 const closeMenu = document.querySelector('.close-menu');
@@ -16,3 +17,7 @@ window.addEventListener('scroll', () => {
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 0);
 });
+
+window.addEventListener('load', () => {
+    loading.classList.add('show');
+})

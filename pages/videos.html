@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="/styles/videos.css">
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 <body>
+    <div class="loading">
+        <img src="/assets/images/logo/logo_movimenta.png" alt="Logo movimenta" class="logo">
+        <h3>Carregando</h3>
+    </div>
     <header class="header">
         <nav class="navbar">
             <a href="/index.html" class="navbar__logo">
@@ -41,10 +46,6 @@
                     <i class='bxr  bx-x close-menu'  ></i>
                     <div class="menu__links">
                     <a href="/pages/desafio-movimenta.html" class="button">Desafio movimenta</a>
-                    <a href="/pages/loja-movimenta.html" class="button__shop">
-                        <i class='bxr  bx-store'  ></i>
-                        Loja movimenta
-                    </a>
                     </div>
                 </div>
             </div>
@@ -92,10 +93,10 @@
                     <div class="content-slide">
                         <h2 class="title-slide">Exercício de alongamento</h2>
                         <p class="description-slide">Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.</p>
-                        <button class="btn__play__video">
+                        <a class="btn__play__video" href="#videoAlongamento" rel="modal:open">
                             <i class="bxr bx-play"></i>
                             <span>Play video</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -105,10 +106,10 @@
                     <div class="content-slide">
                         <h2 class="title-slide">Exercício no pescoço</h2>
                         <p class="description-slide">Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.</p>
-                        <button class="btn__play__video">
+                        <a class="btn__play__video" href="#videoAlongamentoPescoco" rel="modal:open">
                             <i class="bxr bx-play"></i>
                             <span>Play video</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -122,10 +123,10 @@
             <div class="card-item">
                 <div class="card-inner">
                     <div class="card-image">
-                        <img src="/assets/images/videos/mulher-se-alongando.jpg" alt="Mulher se alongando">
-                        <div class="play__button">
+                        <img src="/assets/images/videos/mulher-se-alogando-no-parque.jpg" alt="Mulher se alongando">
+                        <a href="#videoAlongamento" rel="modal:open" class="play__button">
                             <i class='bxr bx-play-circle'></i>
-                        </div>
+                        </a>
                         <div class="info__video">
                             <i class='bxr bx-dots-horizontal-rounded'></i>
                         </div>
@@ -135,33 +136,40 @@
                     <h2>Alongamento com as mãos</h2>
                     <div class="time__video">
                         <i class='bxr bx-clock-3'></i>
-                        <span>32 Segundos</span>
+                        <span>13 Segundos</span>
+                    </div>
+                </div>
+        </div>
+            <div class="card-item">
+                <div class="card-inner">
+                    <div class="card-image">
+                        <img src="/assets/images/videos/alongamento-no-pescoco.jpg" alt="Mulher se alongando">
+                        <a href="#videoAlongamentoPescoco" rel="modal:open" class="play__button">
+                            <i class='bxr bx-play-circle'></i>
+                        </a>
+                        <div class="info__video">
+                            <i class='bxr bx-dots-horizontal-rounded'></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>Alongamento no pescoço</h2>
+                    <div class="time__video">
+                        <i class='bxr bx-clock-3'></i>
+                        <span>24 Segundos</span>
                     </div>
                 </div>
         </div>
     </div>
-
-        <div class="overlay__modal"></div>
-        <div class="modal__video">
-            <div class="modal__close">
-                <i class='bxr bx-x'></i>
-            </div>
-            <div class="modal__image">
-                <img src="/assets/images/videos/mulher-se-alongando.jpg" alt="Mulher se alongando">
-                <div class="play__button__modal">
-                    <i class='bxr bx-play'></i>
-                </div>
-            </div>
-            <div class="modal__content">
-                <div class="time__video">
-                    <i class='bxr bx-clock-3'></i>
-                    <span>32 Segundos</span>
-                </div>
-                <h2 class="title__video">Alongamento com as mãos</h2>
-                <p class="description__video">Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
-            </div>
+        <div id="videoAlongamento" class="modal">
+            <video src="/assets/images/videos/alongamento-com-as-maos.mp4" controls></video>
+        </div>
+        <div id="videoAlongamentoPescoco" class="modal">
+            <video src="/assets/images/videos/alongamento-de-pescoco.mp4" controls></video>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
         <script src="/scripts/videos.js"></script>
 </body>
 </html>
