@@ -29,22 +29,25 @@
                 <li>
                     <a href="/pages/videos.html">Videos</a>
                 </li>
+                <li>
+                    <a href="/pages/desafio-movimenta.html">Desafio</a>
+                </li>
+                <li>
+                    <a href="/pages/loja-movimenta.html" class="active">Loja</a>
+                </li>
             </ul>
             <div class="navbar__right">
-                <div class="navbar__right__links">
-                <a href="/pages/desafio-movimenta.html" class="button">Desafio movimenta</a>
-                <a href="/pages/loja-movimenta.html" class="button__shop">
-                    <i class='bxr  bx-store'  ></i>
-                    <span>Loja movimenta</span>
-                </a>
-                </div>
                 <div class="burger">
                     <i class='bxr  bx-menu'  ></i>
                 </div>
                 <div class="menu">
                     <i class='bxr  bx-x close-menu'  ></i>
                     <div class="menu__links">
-                    <a href="/pages/desafio-movimenta.html" class="button">Desafio movimenta</a>
+                        <a href="/index.html" class="menu__link active">Início</a>
+                        <a href="/pages/ranking.html" class="menu__link">Ranking</a>
+                        <a href="/pages/videos.html" class="menu__link">Videos</a>
+                        <a href="/pages/desafio-movimenta.html" class="menu__link">Desafio</a>
+                        <a href="/pages/loja-movimenta.html" class="menu__link active">Loja</a>
                     </div>
                 </div>
             </div>
@@ -56,19 +59,19 @@
             <li>
                 <a href="/index.html" class="navbar__bottom__link">
                     <i class='bxr  bx-home-alt-2'></i>
-                    Inicio
+                    <span>Início</span>
                 </a>
             </li>
             <li>
                 <a href="/pages/ranking.html" class="navbar__bottom__link">
                     <i class='bxr  bx-trophy'></i> 
-                Ranking
+                <span>Ranking</span>
                 </a>
             </li>
             <li>
                 <a href="/pages/videos.html" class="navbar__bottom__link">
                     <i class='bxr  bx-video'></i> 
-                Videos
+                <span>Videos</span>
                 </a>
             </li>
             <li>
@@ -76,7 +79,13 @@
                     <div class="navbar__bottom__link--icon">
                         <i class='bxr  bx-store'  ></i>
                     </div>
-                Loja
+                <span class="active">Loja</span>
+                </a>
+            </li>
+            <li>
+                <a href="/pages/desafio-movimenta.html" class="navbar__bottom__link">
+                    <i class='bxr  bx-joystick-alt'  ></i>
+                <span>Jogo</span>
                 </a>
             </li>
         </ul>
@@ -97,9 +106,10 @@
             <img src="/assets/images/profiles/perfil_mulher.jpg" alt="Perfil de uma mulher" class="img">
         </div>
         <div class="points__profile">
-            <img src="/assets/images/icons/icone-pontos.png" alt="Icone de pontos">
+            <!-- <img src="/assets/images/icons/icone-pontos.png" alt="Icone de pontos"> -->
             <div class="inner">
-                <h2>Pontos Obtidos</h2>
+                <h1>Beatriz</h1>
+                <h2>Meus pontos</h2>
                 <span class="points">1000</span>
                 <div id="btn__more__points" class="btn__more__points">
                     <span>Consiga mais pontos</span>
@@ -132,6 +142,7 @@
                 <div class="carousel__content">
                     <h3>Day Off</h3>
                     <span>50000 <img src="" alt="" class="plus"></span>
+                    <button class="resgatar__beneficio" onclick="beneficioDayOff()">Resgatar</button>
                 </div>
                 </div>
             </div>
@@ -141,6 +152,7 @@
                 <div class="carousel__content">
                     <h3>Treinamento com certificado</h3>
                     <span>5000 <img src="" alt="" class="plus"></span>
+                    <button class="resgatar__beneficio" onclick="beneficioTreinamentoComCertificado()">Resgatar</button>
                 </div>
             </div>
             </div>
@@ -159,6 +171,7 @@
                 <div class="carousel__content">
                     <h3>Mochila</h3>
                     <span>25000 <img src="" alt="" class="plus"></span>
+                    <button class="resgatar__beneficio" onclick="brindeMochila()">Resgatar</button>
                 </div>
             </div>
             </div>
@@ -168,6 +181,7 @@
                 <div class="carousel__content">
                     <h3>Caneca</h3>
                     <span>8000 <img src="" alt="" class="plus"></span>
+                    <button class="resgatar__beneficio" onclick="brindeCaneca()">Resgatar</button>
                 </div>
             </div>
             </div>
@@ -177,6 +191,7 @@
                 <div class="carousel__content">
                     <h3>Garrafa</h3>
                     <span>5000 <img src="" alt="" class="plus"></span>
+                    <button class="resgatar__beneficio" onclick="brindeGarrafa()">Resgatar</button>
                 </div>
             </div>
             </div>
@@ -186,6 +201,7 @@
                 <div class="carousel__content">
                     <h3>Post it</h3>
                     <span>2000 <img src="" alt="" class="plus"></span>
+                    <button class="resgatar__beneficio" onclick="brindePostIt()">Resgatar</button>
                 </div>
             </div>
             </div>
@@ -195,6 +211,7 @@
                 <div class="carousel__content">
                     <h3>Caneta</h3>
                     <span>1000 <img src="" alt="" class="plus"></span>
+                    <button class="resgatar__beneficio" onclick="brindeCaneta()">Resgatar</button>
                 </div>
             </div>
             </div>
@@ -222,6 +239,88 @@
         <p>Os benefícios (como Day Off e Home Office) serão analisados em conjunto com o RH para definição da data de utilização.</p>
         <p>Esses benefícios podem ser solicitados novamente apenas após 2 meses da data em que o benefício anterior foi utilizado.</p>
         <p>A confirmação da adesão e o agendamento do benefício também serão enviados por e-mail.</p>
+    </div>
+  </div>
+
+  <div class="overlay__modal"></div>
+  <div class="modal modal__beneficio__day_off">
+    <div class="modal__header">
+        <h1 class="title__header">Benefícios</h1>
+        <i class='bxr bx-x close-modal' onclick="closeModal()"></i>
+    </div>
+    <div class="modal__content">
+        <i class='bxr  bx-check'  ></i>
+        <h2 class="title__modal">Parabéns</h2>
+        <h3 class="subtitle__modal">Você resgatou Day off</h3>
+    </div>
+  </div>
+
+  <div class="modal modal__beneficio__treinamento_com_certificado">
+    <div class="modal__header">
+        <h1 class="title__header">Benefícios</h1>
+        <i class='bxr bx-x close-modal' onclick="closeModal()"></i>
+    </div>
+    <div class="modal__content">
+        <i class='bxr  bx-check'  ></i>
+        <h2 class="title__modal">Parabéns</h2>
+        <h3 class="subtitle__modal">Você resgatou Treinamento com certificado</h3>
+    </div>
+  </div>
+
+  <div class="modal modal__brinde__mochila">
+    <div class="modal__header">
+        <h1 class="title__header">Brinde</h1>
+        <i class='bxr bx-x close-modal' onclick="closeModal()"></i>
+    </div>
+    <div class="modal__content">
+        <i class='bxr  bx-check'  ></i>
+        <h2 class="title__modal">Parabéns</h2>
+        <h3 class="subtitle__modal">Você resgatou uma Mochila</h3>
+    </div>
+  </div>
+
+  <div class="modal modal__brinde__caneca">
+    <div class="modal__header">
+        <h1 class="title__header">Brinde</h1>
+        <i class='bxr bx-x close-modal' onclick="closeModal()"></i>
+    </div>
+    <div class="modal__content">
+        <i class='bxr  bx-check'  ></i>
+        <h2 class="title__modal">Parabéns</h2>
+        <h3 class="subtitle__modal">Você resgatou uma Caneca</h3>
+    </div>
+  </div>
+  <div class="modal modal__brinde__garrafa">
+    <div class="modal__header">
+        <h1 class="title__header">Brinde</h1>
+        <i class='bxr bx-x close-modal' onclick="closeModal()"></i>
+    </div>
+    <div class="modal__content">
+        <i class='bxr  bx-check'  ></i>
+        <h2 class="title__modal">Parabéns</h2>
+        <h3 class="subtitle__modal">Você resgatou uma Garrafa</h3>
+    </div>
+  </div>
+  <div class="modal modal__brinde__post_it">
+    <div class="modal__header">
+        <h1 class="title__header">Brinde</h1>
+        <i class='bxr bx-x close-modal' onclick="closeModal()"></i>
+    </div>
+    <div class="modal__content">
+        <i class='bxr  bx-check'  ></i>
+        <h2 class="title__modal">Parabéns</h2>
+        <h3 class="subtitle__modal">Você resgatou uma Post it</h3>
+    </div>
+  </div>
+  <div class="modal modal__brinde__caneta">
+    <div class="modal__header">
+        <h1 class="title__header">Brinde</h1>
+        <i class='bxr bx-x close-modal' onclick="closeModal()"></i>
+    </div>
+    <div class="modal__content">
+        <i class='bxr  bx-check'  ></i>
+        <h2 class="title__modal">Parabéns</h2>
+        <h3 class="subtitle__modal">Você resgatou uma Caneta</h3>
     </div>
   </div>
 

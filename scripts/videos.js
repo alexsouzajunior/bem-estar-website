@@ -2,11 +2,35 @@ const loading = document.querySelector('.loading');
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 const closeMenu = document.querySelector('.close-menu');
-const modalVideo = document.querySelectorAll('.modal__video');
-const modalClose = document.querySelectorAll('.modal__close');
-const overlayModal = document.querySelectorAll('.overlay__modal');
 const infoVideoCardIcone = document.querySelector('.info__video');
 const btnPlayVideoSection = document.querySelector('.btn__play__video');
+const modalVideoAlongamento = document.querySelector('.modal__video__alongamento');
+const modalVideoAlongamentoPescoco = document.querySelector('.modal__video__alongamento_pescoco');
+const closeModalVideo = document.querySelectorAll('.close-modal-video');
+const overlay = document.querySelectorAll('.overlay');
+
+function VideoAlongamento(){
+    modalVideoAlongamento.classList.add('show');
+    overlay.forEach((overlay => {
+        overlay.classList.add('show');
+    }))
+}
+function VideoAlongamentoPescoco(){
+    modalVideoAlongamentoPescoco.classList.add('show');
+    overlay.forEach((overlay => {
+        overlay.classList.add('show');
+    }))
+}
+
+closeModalVideo.forEach((closeModal => {
+    closeModal.addEventListener('click', () => {
+        modalVideoAlongamento.classList.remove('show');
+        modalVideoAlongamentoPescoco.classList.remove('show');
+        overlay.forEach((overlay => {
+        overlay.classList.remove('show');
+        }))
+    })
+}))
 
 window.addEventListener('load', () => {
     loading.classList.add('show');
@@ -33,23 +57,6 @@ closeMenu.addEventListener('click', () => {
 // });
 
 btnPlayVideoSection.addEventListener('click', () => {
-    modalVideo.forEach((item) => {
-        item.classList.remove('open');
-    });
-    overlayModal.forEach((item) => {
-        item.classList.remove('show');
-    });
-});
-
-modalClose.forEach((close) => {
-    close.addEventListener('click', () => {
-        modalVideo.forEach((item) => {
-            item.classList.remove('open');
-        });
-        overlayModal.forEach((item) => {
-            item.classList.remove('show');
-        });
-    });
 });
 
 window.addEventListener('scroll', () => {

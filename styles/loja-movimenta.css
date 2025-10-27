@@ -64,7 +64,7 @@ html{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 30px;
+    padding: 10px 50px;
     transition: .5s;
     z-index: 10;
 }
@@ -157,75 +157,7 @@ html{
 
 .navbar__right{
     width: max-content;
-}
-
-.navbar__right .navbar__right__links{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.navbar__right .button{
-    background: #a5ff50;
-    border: 1px solid #a5ff50;
-    color: #000;
-    width: 200px;
-    padding: .5rem 0;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 300ms ease-in-out;
-}
-
-.navbar__right .button__shop{
-    background: transparent;
-    border: 1px solid #a5ff50;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-    border-radius: 50px;
-    color: #fff;
-    overflow: hidden;
-    transition: 300ms ease-in-out;
-}
-
-.navbar__right .button__shop span{
-    width: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-    transition: 300ms ease-in-out;
-}
-
-.navbar__right .button__shop i{
-    margin-left: 7px;
-    color: #000;
-    font-size: 1.25rem;
-}
-
-.button:hover{
-    background: transparent;
-}
-
-.navbar__right .button__shop:hover{
-    width: 200px;
-    background: #a5ff50;
-    color: #000;
-}
-
-.navbar__right .button__shop:hover span{
-    width: max-content;
-    opacity: 1;
-    visibility: visible;
-}
-
-.navbar__right .button__shop:hover i{
-    margin-left: 0;
+    display: none;
 }
 
 .burger{
@@ -256,6 +188,27 @@ html{
     right: 0;
 }
 
+.menu.open-menu .menu__link:nth-child(1){
+    opacity: 1;
+    transition: .5s .1s ease-in-out;
+}
+.menu.open-menu .menu__link:nth-child(2){
+    opacity: 1;
+    transition: .5s .2s ease-in-out;
+}
+.menu.open-menu .menu__link:nth-child(3){
+    opacity: 1;
+    transition: .5s .3s ease-in-out;
+}
+.menu.open-menu .menu__link:nth-child(4){
+    opacity: 1;
+    transition: .5s .4s ease-in-out;
+}
+.menu.open-menu .menu__link:nth-child(5){
+    opacity: 1;
+    transition: .5s .5s ease-in-out;
+}
+
 .menu .close-menu{
     display: flex;
     justify-content: flex-end;
@@ -273,36 +226,20 @@ html{
     margin-top: 50px;
 }
 
-.menu__links .button__shop{
-    background: transparent;
-    border: 1px solid #a5ff50;
-    width: 200px;
-    padding: .5rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-    border-radius: 50px;
+.menu__links .menu__link{
+    position: relative;
     color: #000;
-    transition: 300ms ease-in-out;
-    z-index: 100;
+    opacity: 0;
 }
 
-.menu__links i{
-    font-size: 1.48rem;
-    color: #000;
-}
-
-.menu__links .button__shop i{
-    margin-left: 0;
-}
-
-.menu__links .button:hover{
-    color: #000;
-}
-
-.menu__links .button__shop:hover{
-    background: #a5ff50;
+.menu__links .menu__link.active::before{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #1ACE00;
 }
 
 .navbar__bottom{
@@ -310,9 +247,10 @@ html{
     bottom: 0;
     left: 0;
     background: #fff;
+    border-top: 1px solid #cfcfcf;
     width: 100%;
     height: 100px;
-    padding: 20px 10px;
+    padding: 10px;
     display: none;
     z-index: 100;
 }
@@ -323,7 +261,7 @@ html{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 2rem;
+    gap: 1.25rem;
 }
 
 .navbar__bottom__links li a{
@@ -340,6 +278,14 @@ html{
 
 .navbar__bottom__link{
     opacity: .5;
+}
+
+.navbar__bottom__link span{
+    display: none;
+}
+
+.navbar__bottom__link span.active{
+    display: flex;
 }
 
 .navbar__bottom__link.active{
@@ -359,24 +305,11 @@ html{
     padding: .25rem 0 0;
 }
 
-.navbar__bottom__link--icon::before{
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translate(-50%);
-    width: 10px;
-    height: 10px;
-    background: #10b030;
-    border-radius: 10px;
-    z-index: -1;
-}
-
 .navbar__bottom .arrow__navbar__bottom{
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -17px) rotate(0deg);
+    transform: translate(-50%, -17px) rotate(180deg);
     font-size: 2rem;
     background: #fff;
     padding: .25rem;
@@ -386,7 +319,7 @@ html{
 }
 
 .arrow__navbar__bottom.active{
-    transform: translate(-50%, -17px) rotate(180deg);
+    transform: translate(-50%, -17px) rotate(0);
 }
 
 .container{
@@ -485,10 +418,15 @@ html{
     line-height: 1.35;
 }
 
+.inner h1{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
 .inner h2{
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 400;
-    color: #000;
+    color: #434343;
 }
 
 .inner .points{
@@ -509,6 +447,10 @@ html{
     cursor: pointer;
 }
 
+.btn__more__points:hover{
+    background: linear-gradient(to left, #74D76B, #43C439);
+}
+
 .btn__more__points a{
     color: #000;
     font-size: 1rem;
@@ -519,7 +461,7 @@ html{
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translate(15px, -50%) rotate(-180deg);
+    transform: translate(15px, -50%) rotate(0);
     background: #fff;
     border: 1px solid #4cd312;
     border-radius: 50px;
@@ -528,11 +470,11 @@ html{
 }
 
 .profile__points.active{
-    left: -445px;
+    left: -380px;
 }
 
 .arrow__profile.active{
-    transform: translate(15px, -50%) rotate(0deg);
+    transform: translate(15px, -50%) rotate(-180deg);
 }
 
 section{
@@ -621,11 +563,11 @@ section{
     gap: 1rem;
     background: #fff;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    width: 320px;
+    width: 380px;
     padding: 1rem;
     margin: 1rem 1rem 3rem;
     border-radius: 10px;
-    height: 220px;
+    height: 250px;
 }
 
 .carousel .carousel__item .icone{
@@ -636,6 +578,10 @@ section{
 }
 
 .swiper-slide .carousel__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     line-height: 1.5;
     text-align: center;
 }
@@ -653,6 +599,22 @@ section{
     color: #01BE01;
 }
 
+.carousel__content .resgatar__beneficio{
+    background: #2bd71e;
+    color: #fff;
+    border: none;
+    width: 100px;
+    height: 35px;
+    border-radius: 50px;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.resgatar__beneficio:hover{
+    transform: scale(1.15);
+}
+
 .politica__premiacao{
     display: flex;
     gap: 1rem;
@@ -668,6 +630,8 @@ section{
 }
 
 .column_one h2{
+    position: relative;
+    top: -5px;
     font-size: 1.7rem;
     font-weight: 700;
     color: #30bb14;
@@ -693,6 +657,102 @@ section{
     font-weight: 400;
     color: #000;
     margin: 10px auto;
+}
+
+.overlay__modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: .25s ease-in-out;
+    z-index: 10;
+}
+
+.overlay__modal.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    width: 380px;
+    padding: 1rem;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .25s ease-in-out;
+    z-index: 100;
+}
+
+.modal.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal .modal__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__header .title__header{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.modal__header .close-modal{
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.modal__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    line-height: 1.45;
+    text-align: center;
+}
+
+.modal__content i{
+    font-size: 2.25rem;
+}
+
+.modal__content .title__modal{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: rgb(34, 173, 3);
+    margin: 3px auto;
+}
+
+.modal__content .subtitle__modal{
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #1d1d1d;
+    margin-bottom: 5px;
+}
+
+.modal__content span{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #585858;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.modal__content span:hover{
+    color: #000;
 }
 
 @media screen and (max-width: 970px) {
@@ -737,7 +797,7 @@ section{
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 700px) {
     .burger{
         display: flex;
     }
@@ -747,11 +807,8 @@ section{
     .menu{
         display: block;
     }
-    .navbar__right .navbar__right__links{
-        display: none;
-    }
-    .navbar__bottom{
-        display: block;
+    .navbar__right{
+        display: flex;
     }
 
     .navbar li{
@@ -764,25 +821,6 @@ section{
 
     .container img{
         width: 100%;
-    }
-
-    .profile__points{
-        bottom: 70px;
-        border-radius: 10px;
-        left: 50%;
-        transform: translate(-50%);
-        flex-direction: column;
-        gap: 1rem;
-        z-index: 1;
-    }
-
-    .profile__points.active{
-        bottom: -320px;
-        left: 50%;
-    }
-
-    .profile__points .arrow__profile{
-        display: none;
     }
 
     .wrapper .content .title__section{
@@ -803,5 +841,36 @@ section{
 @media screen and (max-width: 550px) {
     .column_one h2{
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .header .navbar{
+        justify-content: center;
+    }
+    .navbar__right{
+        display: none;
+    }
+    .navbar__bottom{
+        display: block;
+    }
+
+    .profile__points{
+        bottom: 70px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%);
+        flex-direction: column;
+        gap: 1rem;
+        z-index: 1;
+    }
+
+    .profile__points.active{
+        bottom: -320px;
+        left: 50%;
+    }
+
+    .profile__points .arrow__profile{
+        display: none;
     }
 }

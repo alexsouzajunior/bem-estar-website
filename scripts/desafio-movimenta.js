@@ -1,4 +1,7 @@
 const loading = document.querySelector('.loading');
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('.menu');
+const closeMenu = document.querySelector('.close-menu');
 const cardOne = document.querySelectorAll('.card_one');
 const cardTwo = document.querySelectorAll('.card_two');
 const cardTree = document.querySelectorAll('.card_tree');
@@ -14,6 +17,34 @@ const videoPlayerTwo = document.querySelector('.video__player.exercicio_two');
 const videoPlayerTree = document.querySelector('.video__player.exercicio_tree');
 const videoPlayerFour = document.querySelector('.video__player.exercicio_four');
 const mensageSuccess = document.querySelector('.mensage__success__container');
+
+// const startMinutes = 10;
+// const timeZero = 0;
+// let time = startMinutes * 60;
+
+// const timeCounter = document.getElementById('time');
+
+// setInterval(updateCounter, 1000);
+
+// function updateCounter() {
+//     const minutes = Math.floor(time / 60);
+//     let seconds = time % 60;
+
+//     seconds = seconds < 10 ? '0' + seconds : seconds;
+    
+//     timeCounter.innerHTML = `${minutes}:${seconds}`;
+//     time--;
+// }
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    menu.classList.toggle('open-menu');
+});
+
+closeMenu.addEventListener('click', () => {
+    burger.classList.remove('active');
+    menu.classList.remove('open-menu');
+});
 
 window.addEventListener('load', () => {
     loading.classList.add('show');
