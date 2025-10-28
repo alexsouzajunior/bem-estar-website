@@ -466,6 +466,7 @@
     width: 700px;
     margin: 30px auto 50px;
     border-radius: 10px;
+    padding: 10px;
 }
 
 .section .container{
@@ -566,7 +567,7 @@ tr:nth-child(odd) {
     }
 
     .ranking{
-        margin-bottom: 5.4rem;
+        margin-bottom: 1.25rem;
     }
 
     .wrapper{
@@ -592,6 +593,15 @@ tr:nth-child(odd) {
     }
 
     .wrapper .points{
+        text-align: center;
+    }
+
+    .section{
+        width: 95%;
+        margin-bottom: 7rem;
+    }
+
+    .container .title{
         text-align: center;
     }
 }
