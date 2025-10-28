@@ -42,4 +42,5 @@ window.addEventListener('load', () => {
     ScrollReveal().reveal('.section__dicas .title', {delay: 100, origin: 'bottom'});
     ScrollReveal().reveal('.section__dicas .paragraph', {delay: 200, origin: 'bottom'});
     ScrollReveal().reveal('.container .card__item', {scale: .85});
+    ScrollReveal().reveal('.about__project', {delay: 100, origin: 'bottom'});
 });

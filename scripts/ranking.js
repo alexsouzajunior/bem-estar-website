@@ -36,4 +36,5 @@ window.addEventListener('load', () => {
     ScrollReveal().reveal('.profile', {delay: 100, origin: 'left'});
     ScrollReveal().reveal('.points', {delay: 200, origin: 'right'});
     ScrollReveal().reveal('.ranking', {delay: 300, origin: 'bottom'});
+    ScrollReveal().reveal('.section', {delay: 100, origin: 'bottom'});
 })
