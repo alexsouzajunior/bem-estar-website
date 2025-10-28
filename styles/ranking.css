@@ -426,7 +426,7 @@
     color: #fff;
 }
 
-section{
+.section__ranking{
     display: flex;
     justify-content: center;
     align-items: start;
@@ -459,6 +459,31 @@ section{
 
 .td_none{
     display: none;
+}
+
+.section{
+    background: radial-gradient(circle, #41BA00 0%, #E3FF00 100%);
+    width: 700px;
+    margin: 30px auto 50px;
+    border-radius: 10px;
+}
+
+.section .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.container img{
+    width: 100px;
+}
+
+.container .title{
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #fff;
 }
 
 .ranking .user__position.active{

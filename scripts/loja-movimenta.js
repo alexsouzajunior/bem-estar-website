@@ -152,3 +152,22 @@ var swiper = new Swiper(".mySwiper2", {
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 0);
 });
+
+ScrollReveal({
+  distance: '20px',
+  duration: 2000
+});
+
+window.addEventListener('load', () => {
+  ScrollReveal().reveal('.content .title', {delay: 100, origin: 'left'});
+  ScrollReveal().reveal('.content .description', {delay: 200, origin: 'left'});
+  ScrollReveal().reveal('.container img', {delay: 300, origin: 'right'});
+  
+  ScrollReveal().reveal('.wrapper', {delay: 100, origin: 'bottom'});
+
+  ScrollReveal().reveal('.carousel h2', {delay: 200, origin: 'left'});
+  ScrollReveal().reveal('.swiper-wrapper', {delay: 300, origin: 'bottom'});
+
+  ScrollReveal().reveal('.politica__premiacao .column_one', {delay: 100, origin: 'left'});
+  ScrollReveal().reveal('.politica__premiacao .column_two', {delay: 200, origin: 'right'});
+})

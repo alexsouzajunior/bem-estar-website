@@ -18,24 +18,6 @@ const videoPlayerTree = document.querySelector('.video__player.exercicio_tree');
 const videoPlayerFour = document.querySelector('.video__player.exercicio_four');
 const mensageSuccess = document.querySelector('.mensage__success__container');
 
-// const startMinutes = 10;
-// const timeZero = 0;
-// let time = startMinutes * 60;
-
-// const timeCounter = document.getElementById('time');
-
-// setInterval(updateCounter, 1000);
-
-// function updateCounter() {
-//     const minutes = Math.floor(time / 60);
-//     let seconds = time % 60;
-
-//     seconds = seconds < 10 ? '0' + seconds : seconds;
-    
-//     timeCounter.innerHTML = `${minutes}:${seconds}`;
-//     time--;
-// }
-
 burger.addEventListener('click', () => {
     burger.classList.toggle('active');
     menu.classList.toggle('open-menu');
@@ -68,6 +50,7 @@ window.addEventListener('load', () => {
 cardOne.forEach((cardVideo => {
     cardVideo.addEventListener('click', () => {
         let = mensageSuccess.style.opacity = 0;
+        let = mensageSuccess.style.display = 'none';
             videoPlayerOne.addEventListener('ended', () => {
                 videoPlayerOne.classList.remove('show__video');
                 mensageSuccess.style.opacity = 1;
@@ -94,6 +77,7 @@ cardOne.forEach((cardVideo => {
 cardTwo.forEach((cardVideo => {
     cardVideo.addEventListener('click', () => {
         let = mensageSuccess.style.opacity = 0;
+        let = mensageSuccess.style.display = 'none';
         videoPlayerTwo.addEventListener('ended', () => {
             videoPlayerTwo.classList.remove('show__video');
             mensageSuccess.style.opacity = 1;
@@ -117,6 +101,7 @@ cardTwo.forEach((cardVideo => {
 cardTree.forEach((cardVideo => {
     cardVideo.addEventListener('click', () => {
         let = mensageSuccess.style.opacity = 0;
+        let = mensageSuccess.style.display = 'none';
             videoPlayerTree.addEventListener('ended', () => {
                 videoPlayerTree.classList.remove('show__video');
                 mensageSuccess.style.opacity = 1;
@@ -144,6 +129,7 @@ cardTree.forEach((cardVideo => {
 cardFour.forEach((cardVideo => {
     cardVideo.addEventListener('click', () => {
         let = mensageSuccess.style.opacity = 0;
+        let = mensageSuccess.style.display = 'none';
             videoPlayerFour.addEventListener('ended', () => {
                 videoPlayerFour.classList.remove('show__video');
                 mensageSuccess.style.opacity = 1;
@@ -287,6 +273,20 @@ cardFour.forEach((item => {
 window.addEventListener('scroll', () => {
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 0);
+});
+
+ScrollReveal({
+    distance: '20px',
+    duration: 2000
+});
+
+window.addEventListener('load', () => {
+    ScrollReveal().reveal('.content__main h2', {delay: 100, origin: 'bottom'});
+    ScrollReveal().reveal('.profile', {delay: 200, origin: 'bottom'});
+    ScrollReveal().reveal('.box', {delay: 300, origin: 'left'});
+    ScrollReveal().reveal('.box__desafio .inner', {delay: 400, origin: 'right'});
+    ScrollReveal().reveal('.video__exercicio .video__main', {delay: 100, origin: 'bottom'});
+    ScrollReveal().reveal('.container__card', {delay: 300, origin: 'bottom'});
 });
 // cardOne.addEventListener('click', () => {
 //     cardOne.classList.toggle('active');

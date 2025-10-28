@@ -75,3 +75,13 @@ var swiper = new Swiper('.slide-videos', {
         el: ".swiper-pagination"
     }
 })
+
+ScrollReveal({
+    distance: '20px',
+    duration: 2000
+});
+
+window.addEventListener('load', () => {
+    ScrollReveal().reveal('.title__videos', {delay: 100, origin: 'left'});
+    ScrollReveal().reveal('.container', {scale: .85});
+});

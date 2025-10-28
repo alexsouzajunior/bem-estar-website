@@ -26,3 +26,14 @@ window.addEventListener('scroll', () => {
 window.addEventListener('load', () => {
     userPosition.classList.add('active');
 })
+
+ScrollReveal({
+    distance: '20px',
+    duration: 2000
+});
+
+window.addEventListener('load', () => {
+    ScrollReveal().reveal('.profile', {delay: 100, origin: 'left'});
+    ScrollReveal().reveal('.points', {delay: 200, origin: 'right'});
+    ScrollReveal().reveal('.ranking', {delay: 300, origin: 'bottom'});
+})

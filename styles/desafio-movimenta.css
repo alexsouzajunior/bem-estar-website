@@ -309,7 +309,7 @@ main{
     text-align: center;
     width: 80%;
     padding: 1rem;
-    z-index: 100;
+    z-index: 1;
 }
 
 .content__main h2{
@@ -568,10 +568,12 @@ main .profile{
 .exercicio_tree.show__video,
 .exercicio_four.show__video{
     display: block;
+    border-radius: 10px;
 }
 
 .video__main{
     display: block;
+    border-radius: 10px;
 }
 
 .video__exercicio.active .video__main{
@@ -583,7 +585,7 @@ main .profile{
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 10px;
-    max-height: 530px;
+    max-height: 470px;
     padding: 10px;
     overflow: hidden;
     overflow-y: auto;
@@ -600,7 +602,12 @@ main .profile{
     border-radius: 10px;
     padding: 1rem;
     width: 400px;
+    height: 140px;
     cursor: pointer;
+}
+
+.card__exercicio:hover{
+    background: #17DE77;
 }
 
 .card_one.active,
@@ -608,17 +615,17 @@ main .profile{
 .card_tree.active,
 .card_four.active{
     background: #89ff77;
+    border: 1px solid #89ff77;
 }
 
 .card__exercicio .image__card{
-    overflow: hidden;
     width: 50%;
-    height: 100%;
+    height: 50px;
 }
 
 .image__card img{
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
 }
 
@@ -719,14 +726,20 @@ main .profile{
     }
     .inner__videos .card__exercicio{
         width: 100%;
+        margin: auto;
+    }
+
+    .card__exercicio .image__card{
+        width: 120px;
+    }
+
+    .image__card img{
+        width: 120px;
     }
 
     .card__exercicio .card__content{
         display: flex;
-        justify-content: space-between;
-        align-items: start;
-        width: 100%;
-        flex-wrap: wrap;
+        align-items: center;
     }
 }
 
@@ -775,13 +788,23 @@ main .profile{
     .profile__dados{
         flex-direction: column;
     }
+    .exercicio_one.show__video,
+    .exercicio_two.show__video,
+    .exercicio_tree.show__video,
+    .exercicio_four.show__video{
+        height: 340px;
+    }
 }
 
 @media screen and (max-width: 475px){
     .inner__videos .card__exercicio{
         flex-direction: column;
         align-items: center;
-        height: 250px;
+        height: auto;
+    }
+
+    .card__exercicio .image__card{
+        height: 80%;
     }
 
     .image__card img{
